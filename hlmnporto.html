@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <title>Portfolio - Zakharia</title>
+    </head>
+    <body>
+        <!-- Header / Navigation -->
+        <header class="header">
+            <a href="hlmnporto.html" class="logo">Zakharia</a>
+
+            <i class='bx bx-menu' id="menu-icon"></i>
+
+            <nav class="navbar" id="navbar">
+                <a href="hlmnporto.html">Home</a>
+                <a href="about.html">About / CV</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero / Home section (EDITABLE: change text below) -->
+        <main>
+            <section id="home" class="hero">
+                <div class="container">
+                                <h1 class="name">Halo, saya <span id="hero-name">Zakharia</span></h1>
+                                <p class="role" id="hero-role">Mahasiswa — NIM 15230909</p>
+                                <p class="intro" id="hero-intro">
+                                    Saya sedang mempersiapkan tugas akhir. Pengalaman: admin Mini Soccer Paris II dan joki akun Genshin Impact & Wuthering Waves. Berikut beberapa proyek yang pernah saya buat.
+                                </p>
+
+                    <div class="cta">
+                        <a href="about.html" class="btn primary">Lihat CV</a>
+                        <a href="portfolio.html" class="btn">Lihat Proyek</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Optional quick skill / highlights (editable) -->
+            <section class="highlights">
+                <div class="container">
+                    <h2>Highlight</h2>
+                                <ul class="highlights-list">
+                                    <li id="hl-1">Admin Mini Soccer Paris II</li>
+                                    <li id="hl-2">Joki akun Genshin Impact & Wuthering Waves</li>
+                                    <li id="hl-3">Projek: Program kasir toko sepatu; Program kasir laundry (Flutter)</li>
+                                </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+            <p>© <span id="footer-year"></span> <span id="footer-name">Zakharia</span>. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Simple mobile menu toggle
+            const menuIcon = document.getElementById('menu-icon');
+            const navbar = document.getElementById('navbar');
+            menuIcon && menuIcon.addEventListener('click', () => {
+                navbar.classList.toggle('open');
+            });
+
+            // Set current year in footer
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+        </script>
+    </body>
+</html>

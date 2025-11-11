@@ -1,0 +1,194 @@
+/* Simple, easy-to-edit stylesheet for the portfolio
+     Edit colors, fonts and sizes below. Comments are in Indonesian to help.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --accent-color: #006d5b; /* warna utama, edit di sini */
+    --muted: #6b6b6b;
+    --container-width: 1100px;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    background: var(--bg-color);
+    color: #111;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* General smaller sizes for phones */
+@media (max-width: 480px) {
+    html { font-size: 56%; }
+    .container { width: 96%; }
+    .header { padding: 1.2rem 0; }
+    .logo { font-size: 2rem; }
+    .name { font-size: 2.4rem; }
+    .role { font-size: 1.4rem; }
+    .intro { font-size: 1.4rem; }
+    section { padding: 4rem 1.6rem; }
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.navbar a {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* Menu icon (shown on small screens) */
+#menu-icon {
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* Mobile nav open state */
+.navbar.open {
+    display: block;
+}
+
+/* Hero */
+.hero {
+    padding: 6rem 0;
+}
+
+.name {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.role {
+    font-size: 1.8rem;
+    color: var(--muted);
+    margin-bottom: 1.6rem;
+}
+
+.intro {
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.cta .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    font-weight: 600;
+}
+
+.cta .btn.primary {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.highlights {
+    padding: 3rem 0 6rem;
+}
+
+.highlights h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.highlights-list {
+    list-style: disc inside;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid #eee;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    #menu-icon { display: block; }
+    .navbar { display: none; position: absolute; right: 1.6rem; top: 6.8rem; background: #fff; padding: 1.6rem; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    .navbar a { display: block; margin: 0.8rem 0; }
+    .container { width: 94%; }
+    .name { font-size: 2.6rem; }
+}
+
+/* Small helper classes for editable areas */
+.editable { background: rgba(0,0,0,0.02); padding: 0.6rem 0.8rem; border-radius: 4px; }
+
+/* Project card styles (used on portfolio page) */
+.projects { padding: 4rem 0; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+.project { border: 1px solid #eee; padding: 1.6rem; border-radius: 8px; }
+.project h3 { margin-bottom: 0.8rem; font-size: 1.6rem; }
+
+/* Form on contact page */
+.form-group { margin-bottom: 1.2rem; }
+.form-control { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1.4rem; }
+
+/* End of stylesheet */
+
+/* About page layout: two-column grid (content + avatar) */
+.about-grid { display: grid; grid-template-columns: 1fr 320px; gap: 2.4rem; align-items: start; padding: 2.4rem 0; }
+.avatar { width: 100%; max-width: 320px; border-radius: 8px; display: block; border: 1px solid #eee; }
+.bio-section h2 { margin-top: 1.6rem; }
+
+/* Progress bar (skill proficiency) */
+.skill { margin-bottom: 1rem; }
+.skill-label { display:flex; justify-content:space-between; font-size:1.4rem; margin-bottom:0.4rem; }
+.progress { background: #f0f0f0; border-radius: 12px; overflow: hidden; height: 12px; }
+.progress-bar { height: 100%; background: var(--accent-color); width: 0%; transition: width .6s ease-in-out; }
+.skill-percent { font-size: 1.3rem; color: var(--muted); margin-left: 0.6rem; }
+
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .avatar { margin: 1.6rem auto 0; max-width: 240px; }
+}
+
+/* Improve tap targets and spacing on small screens */
+@media (max-width: 600px) {
+    .navbar a { font-size: 1.8rem; }
+    .cta .btn { padding: 1rem 1.4rem; font-size: 1.5rem; }
+    .project { padding: 1.2rem; }
+}

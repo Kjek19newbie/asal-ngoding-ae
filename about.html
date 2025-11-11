@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>About / CV - Zakharia</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="hlmnporto.html" class="logo">Zakharia</a>
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="hlmnporto.html">Home</a>
+        <a href="about.html">About / CV</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Zakharia</h1>
+        <p class="role">Mahasiswa — NIM 15230909</p>
+        <p class="intro editable">Saya sedang mempersiapkan tugas akhir. Pengalaman saya meliputi menjadi admin Mini Soccer Paris II dan joki akun pada Genshin Impact & Wuthering Waves. Saya memiliki pengalaman membuat aplikasi kasir untuk toko sepatu dan sistem kasir laundry berbasis Flutter.</p>
+      </section>
+
+      <!-- About grid: left content, right avatar -->
+      <section class="cv">
+        <div class="about-grid">
+          <div class="bio-section">
+            <h2>Contact</h2>
+            <p>Email: <span class="editable">Jakaaa36@gmail.com</span></p>
+            <p>Phone: <span class="editable">085705032286</span></p>
+
+            <h2>Identitas</h2>
+            <p>NIM: <strong>15230909</strong></p>
+
+            <h2>Education</h2>
+            <div class="editable">
+              <h3>Universitas Bina Sarana Informatika Pontianak</h3>
+              <p>2023 - 2027 • Jurusan Teknik Informatika</p>
+            </div>
+
+            <h2>Experience</h2>
+            <div class="editable">
+              <h3>Penjoki — Syeonikstore (nickname: Kjekstore)</h3>
+              <p>Posisi saat ini: penjoki akun Genshin Impact dan Wuthering Waves. Pengalaman juga sebagai admin Mini Soccer Paris II.</p>
+            </div>
+
+            <h2>Skills</h2>
+            <div class="skill">
+              <div class="skill-label"><span>Penjoki handal</span><span class="skill-percent">—</span></div>
+              <div class="editable">Deskripsi singkat: berpengalaman melakukan jasa joki dengan aman dan efisien.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-label"><span>Menguasai HTML &amp; CSS</span><span class="skill-percent">87%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:87%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-label"><span>Kecakapan Bahasa</span><span class="skill-percent">Di atas rata-rata</span></div>
+              <div class="editable">Dapat berkomunikasi secara efektif dan cepat beradaptasi ketika berkolaborasi.</div>
+            </div>
+
+            <h2>Certificates / Awards</h2>
+            <div class="editable">Pernah memenangkan penghargaan berupa piala dan piagam di divisi Genshin Impact dalam menyelesaikan event Spiral Abyss.</div>
+
+            <h2>Projects</h2>
+            <div class="editable">
+              <h3>Program Kasir Toko Sepatu</h3>
+              <p>Sistem kasir untuk toko sepatu yang mencakup transaksi dan manajemen inventaris.</p>
+
+              <h3>Program Kasir Laundry (Flutter)</h3>
+              <p>Aplikasi kasir laundry berbasis Flutter untuk input order dan laporan sederhana.</p>
+
+              <h3>Figma Edit (UI/UX)</h3>
+              <p>Yasa pernah membuat editan Figma untuk mata kuliah UI/UX (mockup & prototyping).</p>
+            </div>
+          </div>
+
+          <!-- Right: avatar / photo from Google Drive -->
+          <aside>
+            <img class="avatar" src="https://drive.google.com/uc?export=view&id=1wv7P8aAEBUKtOxXbw1ah97CrUCbnjsr2" alt="Foto Zakharia" />
+            <p style="font-size:1.3rem;color:var(--muted);margin-top:0.8rem;text-align:center;">Zakharia — NIM 15230909</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="footer-year">2025</span> <span>Zakharia</span></p>
+      </div>
+    </footer>
+
+    <script>
+      // set footer year dynamically
+      document.getElementById('footer-year') && (document.getElementById('footer-year').textContent = new Date().getFullYear());
+
+      // Mobile menu toggle and auto-close on link click
+      const menuIcon = document.getElementById('menu-icon');
+      const navbar = document.querySelector('.navbar');
+      menuIcon && menuIcon.addEventListener('click', () => navbar.classList.toggle('open'));
+      document.querySelectorAll('.navbar a').forEach(a => a.addEventListener('click', () => navbar.classList.remove('open')));
+    </script>
+
+  </body>
+</html>

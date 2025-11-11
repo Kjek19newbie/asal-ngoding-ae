@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>Portfolio - Zakharia</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="hlmnporto.html" class="logo">Zakharia</a>
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="hlmnporto.html">Home</a>
+        <a href="about.html">About / CV</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container projects">
+      <section>
+        <h1>My Projects</h1>
+        <p class="editable">Berikut beberapa proyek yang pernah saya kerjakan. Klik judul untuk detail (jika tersedia) atau edit deskripsi sesuai kebutuhan.</p>
+
+        <div class="project-grid">
+          <article class="project">
+            <h3>Program Kasir Toko Sepatu</h3>
+            <p class="editable">Sebuah aplikasi kasir sederhana untuk toko sepatu yang menangani transaksi, inventaris, dan cetak struk. Dibuat sebagai latihan pengembangan sistem kasir (bahasa & teknologi: PHP / MySQL atau sesuai kebutuhan). Tambahkan link atau screenshot jika ingin ditampilkan.</p>
+          </article>
+
+          <article class="project">
+            <h3>Program Kasir Laundry (Flutter)</h3>
+            <p class="editable">Aplikasi kasir laundry berbasis Flutter yang mendukung input order, penghitungan harga, dan laporan sederhana. Cocok untuk demonstrasi kemampuan mobile app. Tambahkan detail teknis atau tautan repository jika tersedia.</p>
+          </article>
+
+          <article class="project">
+            <h3>Project Lain / Demo</h3>
+            <p class="editable">Ruang kosong untuk proyek tambahan. Misal: script untuk otomatisasi, mini game, atau demo tugas akhir. Edit sesuai kebutuhan.</p>
+            </article>
+            <article class="project">
+              <h3>Project 3 — Figma Edit (UI/UX)</h3>
+              <p class="editable">Yasa pernah membuat editan Figma untuk mata kuliah UI/UX. Termasuk mockup, prototyping, dan perbaikan antarmuka berdasarkan masukan dosen. Tambahkan link ke file Figma jika ingin ditampilkan.</p>
+            </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="footer-year">2025</span> <span>[Nama Anda]</span></p>
+      </div>
+    </footer>
+
+    <script>
+      // set footer year dynamically
+      document.getElementById('footer-year') && (document.getElementById('footer-year').textContent = new Date().getFullYear());
+
+      // Mobile menu toggle and auto-close on link click
+      const menuIcon = document.getElementById('menu-icon');
+      const navbar = document.querySelector('.navbar');
+      menuIcon && menuIcon.addEventListener('click', () => navbar.classList.toggle('open'));
+      document.querySelectorAll('.navbar a').forEach(a => a.addEventListener('click', () => navbar.classList.remove('open')));
+    </script>
+  </body>
+</html>
